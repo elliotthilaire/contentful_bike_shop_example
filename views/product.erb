@@ -1,0 +1,25 @@
+
+<h1><%= @product.name %></h1>
+
+<% @product.images.each do |image| %>
+  <img src="<%=image.image_url width: 300, height: 200 %>" />
+<% end %>
+
+<h2>$<%= @product.price %></h2>
+
+<hr />
+<h3>Bundles including the <%= @product.name %></h3>
+
+<% @product.bundles.each do |bundle| %>
+  <a href="/bundles#<%= bundle.name %>">
+    <h4><%= bundle.name %><h4>
+  </a>
+
+  <ul>
+    <% bundle.products.each do |product| %>
+      <li><%= product.name %></li>
+    <% end %>
+  </ul>
+
+  <p>$<%= bundle.price %></p>
+<% end %>

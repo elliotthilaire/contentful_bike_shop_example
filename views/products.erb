@@ -1,0 +1,12 @@
+
+<% @products.each do |product| %>
+  <a href="/products/<%= product.slug %>">
+    <h1><%= product.name %></h1>
+  </a>
+
+  <% if product.images.first %>
+    <img src="<%= product.images.first.image_url width: 300, height: 200 %>" />
+  <% end %>
+
+  <h2>$<%= product.price%></h2>
+<% end %>
