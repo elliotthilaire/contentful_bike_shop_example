@@ -4,7 +4,7 @@ require_relative 'initializers/contentful_model'
 require_relative 'models/product'
 require_relative 'models/bundle'
 
-Bundle.all.load
+Bundle.all.load   # Why do we do this?
 Product.all.load
 
 get '/products' do
