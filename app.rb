@@ -1,8 +1,11 @@
 require 'sinatra'
+require 'sinatra/asset_pipeline'
 
 require_relative 'initializers/contentful_model'
 require_relative 'models/product'
 require_relative 'models/bundle'
+
+register Sinatra::AssetPipeline
 
 Bundle.all.load   # Why do we do this?
 Product.all.load
