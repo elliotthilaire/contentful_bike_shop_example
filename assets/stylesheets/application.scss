@@ -1,3 +1,9 @@
-
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "base/base";
+
+.products {
+  @include outer-container;
+  .product { @include span-columns(3); }
+}
+

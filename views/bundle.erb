@@ -7,12 +7,16 @@
 
 <p>You save $<%= @bundle.price_savings%></p>
 
-<% @bundle.products.each do |product| %>
-  <a href="/products/<%= product.slug %>">
-    <h3><%= product.name %></h3>
-  </a>
+<section class="products">
+  <% @bundle.products.each do |product| %>
+    <div class="product">
+      <a href="/products/<%= product.slug %>">
+        <h3><%= product.name %></h3>
+      </a>
 
-  <% product.images.each do |image| %>
-    <img src="<%=image.image_url width: 300, height: 200 %>" />
+      <% product.images.each do |image| %>
+        <img src="<%=image.image_url width: 300, height: 200 %>" />
+      <% end %>
+    </div>
   <% end %>
-<% end %>
+</section>
