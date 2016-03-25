@@ -1,11 +1,10 @@
 # Outsource your Admin Interface
 
-With http://contentful.com, demo for http://brisruby.org
+This is a demo app created with With http://contentful.com for a short talk at http://brisruby.org
 
-There are options. Rails CMS: Comfortable-mexican-sofa, Refinery.
-Or you could go external, or hosted Ghost, Wordpress, Drupal.
+The application is hosted at http://contentful-bike-shop-example.herokuapp.com
 
-Contentful sits in the middle. 
+## Contenful
 
 > Like a CMS — except for the bad parts.
 > Meet Contentful, A headless CMS with an API at its core.
@@ -14,12 +13,12 @@ It provides a nice admin interface to manage the data and provides an API for yo
 
 ## What is it?
 
-There's three parts. I'll talk about two.
+There's three parts.
 
   * Web interface https://app.contentful.com/
   * An API for accessing content
   * An API for modifying content
-  
+
 ## There are gems
 
 Contentful
@@ -75,14 +74,6 @@ Finally we add Reference field. So a bundle can have many products, and can only
 
 Can delete or disable fields.
 Can't delete a field. Can't delete a field if it has an entity.
-
-### Content entry
-
-Nice isn't it. Lets add a product.
-
-### The code
-
-It doesn't do css. :)
 
 #### contentful_model
 
